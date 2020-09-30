@@ -6,4 +6,14 @@ class Post < ActiveRecord::Base
     
     include ActiveModel::Validations
     validates_with PostValidator
+
+    # private
+
+    #     def is_clickbait?
+    #         if title
+    #             unless title.match? (/won't belive|Secret|Top \d\d|Guess|/)
+    #                 errors[:title] << "must be more clickbait-y"
+    #             end
+    #         end
+    #     end
 end
